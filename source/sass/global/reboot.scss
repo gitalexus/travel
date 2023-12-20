@@ -12,12 +12,13 @@ body {
 }
 
 html {
-  font-style: normal;
   font-weight: 400;
-  font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-style: normal;
+  font-size: $fz-default;
+  font-family: $ff-montserrat;
+  color: $text-color-primary;
+  background-color: $bg-color-primary;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,12 +31,11 @@ html {
 body {
   width: 100%;
   height: 100%;
-
-  background-color: $color-default-white;
+  background-color: $bg-color-primary;
 }
 
 a {
-  color: $color-default-black;
+  // color: $color-default-black;
   text-decoration: none;
 }
 
@@ -56,11 +56,11 @@ textarea {
 // rgba не подойдет, сконвертируйте цвет в hex без прозрачности
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
-input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-white;
+// input:-webkit-autofill {
+  // box-shadow: inset 0 0 0 1000px $color-default-white;
 
-  -webkit-text-fill-color: $color-default-black;
-}
+  // -webkit-text-fill-color: $color-default-black;
+// }
 
 // firefox placeholder \ invalid fix + ios bdrs
 input,
