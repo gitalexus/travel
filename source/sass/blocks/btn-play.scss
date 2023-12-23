@@ -1,0 +1,38 @@
+.btn-play {
+  position: absolute;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  border: 1px solid $btn-play-stroke;
+  padding: 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: $btn-play-stroke;
+  background-color: transparent;
+  transition: color $trans-default, border-color $trans-default;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $btn-play-stroke-hover;
+    color: $btn-play-stroke-hover;
+    outline: none;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $btn-play-bg-active;
+  }
+
+  &:disabled {
+    border-color: 	rgba(2, 102, 193, 0.1);
+    color: #0266C1;
+
+    svg path {
+      fill: #0266C1;
+    }
+  }
+}

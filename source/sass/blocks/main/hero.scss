@@ -1,0 +1,145 @@
+.hero {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  min-height: $hero-height;
+}
+
+.hero__slider {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: $hero-height;
+  list-style: none;
+}
+
+.hero__slide {
+  height: 100%;
+  min-height: $hero-height;
+}
+
+.hero__img-wrapper {
+  position: absolute;
+  height: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(112deg, rgba(15, 20, 41, 0.33) 17.23%, rgba(15, 20, 41, 0.00) 94.93%);
+  }
+
+  img {
+    position: relative;
+    width: 100vw;
+    height: $hero-height;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 200px 0 79px;
+  color: $text-color-inverse;
+  height: 100%;
+  min-height: $hero-height;
+
+  h3 {
+    margin: 0;
+    width: 944px;
+    margin-bottom: 23px;
+    position: relative;
+    z-index: 1;
+
+    @include heading-1;
+  }
+
+  p {
+    width: 464px;
+    margin: 0;
+    margin-bottom: 37px;
+
+    @extend .text-big;
+  }
+}
+
+.hero__view-tour-btn {
+  margin-bottom: auto;
+}
+
+.hero__features {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__extra {
+  position: absolute;
+  right: 0;
+
+  &--slide-1 {
+    top: 327px;
+
+    img {
+      width: 482px;
+    }
+  }
+
+  &--slide-2 {
+    width: 410px;
+    height: 459px;
+    bottom: 154px;
+  }
+}
+
+.hero .hero__pagination {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 120px;
+  padding-left: 600px;
+  width: $vp-1440;
+  z-index: 100;
+  bottom: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.hero__pagination {
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border: 1px solid $btn-play-stroke;
+    opacity: 1;
+    background: transparent;
+    transition: background 0.3s ease;
+
+    // искусственно повышена специфичность
+    &.swiper-pagination-bullet {
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus-visible {
+      outline: none;
+      outline: 1px solid rgba(255, 255, 255, 0.5);
+      outline-offset: 2px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $btn-color-active;
+  }
+}

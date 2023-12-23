@@ -1,0 +1,46 @@
+.header {
+  background-color: $btn-color-primary;
+  display: grid;
+  grid-template-columns: 205px 1fr 145px;
+  max-width: $max-width;
+  margin: 0 auto;
+  align-items: center;
+  padding: 32px 20px;
+  z-index: 100;
+  position: relative;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__phone {
+  color: $text-color-inverse;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  transform: translate(0, 2px);
+
+  &:hover {
+    color: $menu-link-hover;
+    transition: color $trans-default-min;
+  }
+
+  &:active {
+    color: $menu-link-active;
+    transition: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $menu-link-default;
+  }
+}
+
+.header__logo {
+  width: 205px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

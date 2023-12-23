@@ -1,0 +1,40 @@
+.btn {
+
+  display: inline-flex;
+  padding: 20px;
+  font-family: $ff-primary;
+  font-size: 16px;
+  color: $text-color-inverse;
+  text-align: center;
+  justify-content: center;
+  font-weight: 500;
+
+  line-height: 16px; /* 100% */
+  background-color: $btn-color-primary;
+  min-width: 180px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color $trans-default, color $trans-default, border-color $trans-default;
+
+  &:hover:not(:disabled):not(&--disabled),
+  &:focus-visible:not(:disabled):not(--disabled) {
+    outline: none;
+    color: $btn-color-hover;
+    background-color: $btn-color-bg-hover;
+    border-color: $stroke-color-primary;
+    border-radius: 5px;
+    transition: all 0.05s ease-in-out;
+    transition: background-color $trans-default-min, color $trans-default-min, border-color $trans-default-min;
+  }
+
+  &:active:not(:disabled):not(&--disabled) {
+    color: $btn-color-active;
+    background-color: $btn-bg-color-active;
+    transition: background-color $trans-default-min, color $trans-default-min, border-color $trans-default-min;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $btn-bg-color-disabled;
+  }
+}

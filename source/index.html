@@ -10,13 +10,175 @@
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/apple.png"> <!-- 180×180 -->
-    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
+    <header class="header">
+      <button class="header__burger burger"></button>
+      <a class="header__logo">
+        <svg width="142" height="42" aria-hidden="true" focusable="false">
+          <use href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="header_navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#tours">Туры</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#study">Обучение</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#about">О нас</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#review">Отзывы</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#gallery">Фотографии</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__phone" href="tel:88007253232">8 800 725-32-32</a>
+    </header>
+    <main class="main">
+      <h1 class="visually-hidden">Сайт агентства путешествий "Lifetour"</h1>
+      <section class="hero swiper" data-swiper="hero">
+        <h2 class="visually-hidden">Самые интересные туры, которые стоит посетить</h2>
+        <!-- swiper hero -->
+        <ul class="hero__slider swiper-wrapper">
+          <li class="hero__slide swiper-slide">
+            <div class="hero__img-wrapper">
+              <picture>
+                <img src="img/hero/hero-1.jpg" alt="Вершины гор Кавказа" width="1440" height="800">
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero__content">
+                <h3>Захватывающие вершины Кавказа</h3>
+                <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                <a class="btn hero__view-tour-btn" href="#">Смотреть тур</a>
+                <div class="hero__features">
+                  <span class="feature feature--hero text-xsmall">
+                    <svg width="12" height="12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#moon"></use>
+                    </svg>
+                    6 дней/5 ночей
+                  </span>
+                  <span class="feature feature--hero text-xsmall">
+                    <svg width="12" height="12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#level"></use>
+                    </svg>
+                    <span>Высокая сложность</span>
+                  </span>
+                </div>
+                <div class="hero__extra hero__extra--slide-1">
+                  <img src="img/hero/hero-1-video-poster.jpg" alt="">
+                  <button class="btn-play">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M37 28L25 17V39L37 28Z" fill="white" stroke="currentColor"/>
+                      </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hero__slide swiper-slide">
+            <div class="hero__img-wrapper">
+              <picture>
+                <img src="img/hero/hero-2.jpg" alt="Пейзаж Камчатки" width="1440" height="800">
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero__content">
+                <h3>Невероятная природа Камчатки</h3>
+                <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                <a class="btn hero__view-tour-btn" href="#">Смотреть тур</a>
+                <div class="hero__features">
+                  <span class="feature feature--hero text-xsmall">
+                    <svg width="12" height="12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#moon"></use>
+                    </svg>
+                    9 дней/10 ночей
+                  </span>
+                  <span class="feature feature--hero text-xsmall">
+                    <svg width="12" height="12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#level"></use>
+                    </svg>
+                    <span>Средняя сложность</span>
+                  </span>
+                </div>
+                <div class="hero__extra hero__extra--slide-2">
+                  <img src="img/hero/hero-2-cards.png" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hero__slide swiper-slide">
+            <div class="hero__img-wrapper">
+              <picture>
+                <img src="img/hero/hero-3.jpg" alt="Пейзаж Камчатки" width="1440" height="800">
+              </picture>
+            </div>
+            <div class="container">
+              <div class="hero__content">
+                <h3>Магические пейзажи Алтайского Края</h3>
+                <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+                <a class="btn hero__view-tour-btn" href="#">Смотреть тур</a>
+                <div class="hero__features">
+                  <span class="feature feature--hero text-xsmall">
+                    <svg width="12" height="12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#moon"></use>
+                    </svg>
+                    8 дней/7 ночей
+                  </span>
+                  <span class="feature feature--hero text-xsmall">
+                    <svg width="12" height="12" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#level"></use>
+                    </svg>
+                    <span>Легкая сложность</span>
+                  </span>
+                </div>
+                <div class="hero__extra hero__extra--slide-3">
+                  <iframe style="border:none;width:385px;height:215px;" width="385" height="215" src="https://music.yandex.ru/iframe/track/119107082/25474374" loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- hero - swiper pagination -->
+        <div class="hero__pagination swiper-pagination-test" data-swiper-pagination="hero"></div>
+      </section>
+      <section class="tours">
+        <h2>Ближайшие туры</h2>
+        <div class="tours__slider">
+          <div class="tours__buttons">
+            <button class="btn btn-icon btn-icon--prev" aria-label="следующий тур"></button>
+            <button class="btn btn-icon btn-icon--next" aria-label="предыдущий тур"></button>
+          </div>
+          <ul class="tours__list">
+            <li class="tours__item">
+              <article class="tours__card">
+                <div class="tour__img-wrapper">
+                  <img src="img/tours/tour-1.jpg" alt="Эльбрус">
+                </div>
+                <div class="tour__content">
+                  <p class="tour__features">
+                    <span class="tour__feature feature feature--location">Кавказ</span>
+                    <span class="tour__feature feature feature--days">4 дня</span>
+                    <span class="tour__feature feature feature--nights">3 ночи</span>
+                  </p>
+                  <h2>Путешествие вокруг Эльбруса</h2>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-
-
-
+    </main>
     <!-- <div class="wrapper">
       <header>
         <div class="container"></div>

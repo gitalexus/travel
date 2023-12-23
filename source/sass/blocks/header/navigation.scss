@@ -1,0 +1,36 @@
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  transform: translateY(2px);
+}
+
+.navigation__item {
+  list-style-type: none;
+}
+
+.navigation__link {
+  color: $menu-link-default;
+  padding: 10px;
+  transition: color $trans-default;
+
+  &:hover {
+    color: $menu-link-hover;
+    transition: color $trans-default-min;
+  }
+
+  &:active {
+    color: $menu-link-active;
+    transition: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $menu-link-default;
+  }
+}
