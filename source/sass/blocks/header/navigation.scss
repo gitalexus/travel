@@ -1,3 +1,31 @@
+.navigation {
+  @include tablet {
+    background-color: $bg-color-primary;
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    left: -100vw;;
+    transition: left 0.2s ease-in-out;
+  }
+
+  &.is-hidden {
+    visibility: visible;
+
+    @include tablet {
+      visibility: hidden;
+    }
+
+  }
+
+  .burger-is-active & {
+    @include tablet {
+      left: 0;
+    }
+  }
+
+
+}
+
 .navigation__list {
   display: flex;
   flex-direction: row;
@@ -8,6 +36,14 @@
   align-items: center;
   gap: 11px;
   transform: translateY(2px);
+
+  @include tablet {
+    gap: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 45px 70px;
+  }
 }
 
 .navigation__item {
@@ -18,6 +54,17 @@
   color: $menu-link-default;
   padding: 10px;
   transition: color $trans-default;
+
+  @include tablet {
+    color: $text-color-primary;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px; /* 100% */
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+    padding: 0;
+  }
 
   &:hover {
     color: $menu-link-hover;

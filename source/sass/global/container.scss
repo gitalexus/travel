@@ -1,7 +1,14 @@
 .container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 120px;
-  width: 1440px;
+  max-width: 1440px;
+
+  @include mobile {
+    padding: 0 clamp(15px, 5.85vw, 45px);
+  }
+
+  @include break($vp-568) {
+    padding: 0 15px;
+  }
 }

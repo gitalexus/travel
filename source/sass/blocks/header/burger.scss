@@ -1,0 +1,59 @@
+.burger {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  & span {
+    width: 17px;
+    height: 2px;
+    background-color: $text-color-inverse;
+    transition: width  0.1s ease-in-out;
+
+    &::after,
+    &::before {
+      content: "";
+      transform-origin: 0 center;
+      width: 25px;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      background-color: $text-color-inverse;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &::before {
+      top: 3px;
+    }
+
+    &::after {
+      bottom: 3px;
+    }
+  }
+
+  .burger-is-active & {
+    span {
+      width: 0;
+      background-color: $text-color-primary;
+
+      &::before {
+        background-color: $text-color-primary;
+        left: 0;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        background-color: $text-color-primary;
+        transform: rotate(-45deg);
+        left: 0;
+      }
+    }
+
+  }
+}
