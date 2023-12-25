@@ -1,5 +1,6 @@
 .hero {
   width: 100vw;
+  min-width: $vp-350;
   position: absolute;
   top: 0;
   min-height: $hero-height;
@@ -49,6 +50,7 @@
     height: $hero-height;
     height: 100%;
     object-fit: cover;
+    min-width: 350px;
   }
 }
 
@@ -111,6 +113,7 @@
 
     @include break($vp-1200) {
       margin-bottom: 26px;
+      width: 500px;
     }
 
     @include break($vp-568) {
@@ -140,6 +143,8 @@
 .hero__extra {
   position: absolute;
   right: 0;
+  width: 482px;
+  height: 317px;
 
   @include break($vp-1200) {
     position: relative;
@@ -150,14 +155,24 @@
   }
 
   &--slide-1 {
-    top: 327px;
+    top: 329px;
+    width: 482px;
+    height: 317px;
 
     @include break($vp-1200) {
       top: 0;
+      width: 442px;
+      height: 300px;
     }
 
     img {
-      width: 482px;
+      height: 100%;
+      width: 100%;
+
+      @include break($vp-1200) {
+        // width: 442px;
+        // height: 300px;
+      }
     }
   }
 
@@ -165,14 +180,14 @@
     width: 410px;
     height: 459px;
     bottom: 154px;
+
+    @include break($vp-1200) {
+      width: 442px;
+      height: 365px;
+      bottom: 0;
+    }
   }
 
-  @include break($vp-1200) {
-    width: 442px;
-    height: 365px;
-    bottom: 0;
-
-  }
 }
 
 .hero .hero__pagination {

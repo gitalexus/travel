@@ -19,6 +19,7 @@ html {
   font-family: $ff-primary;
   color: $text-color-primary;
   background-color: $bg-color-primary;
+  min-width: 350px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

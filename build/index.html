@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание проекта">
     <title>Travel</title>
     <link rel="stylesheet" href="css/style.min.css">
@@ -47,7 +47,8 @@
     </header>
     <main class="main">
       <h1 class="visually-hidden">Сайт агентства путешествий "Lifetour"</h1>
-      <section class="hero swiper" data-swiper="hero">
+      <!-- hero -->
+      <section class="hero swiper" data-swiper="hero" data-test="hero">
         <h2 class="visually-hidden">Самые интересные туры, которые стоит посетить</h2>
         <!-- swiper hero -->
         <ul class="hero__slider swiper-wrapper">
@@ -156,82 +157,249 @@
         <!-- hero - swiper pagination -->
         <div class="hero__pagination swiper-pagination-test" data-swiper-pagination="hero"></div>
       </section>
-      <section class="tours">
-        <h2>Ближайшие туры</h2>
-        <div class="tours__slider">
+      <!-- tours -->
+      <section class="tours container-inner" data-test="tours">
+        <img src="img/tours/bg-clouds-tours.jpg" width="602" height="1630" alt="">
+        <header class="tour__header">
+          <h2 class="tours__title heading-2">Ближайшие туры</h2>
           <div class="tours__buttons">
-            <button class="btn btn-icon btn-icon--prev" aria-label="следующий тур"></button>
-            <button class="btn btn-icon btn-icon--next" aria-label="предыдущий тур"></button>
+            <button class="btn-arrow btn-arrow--prev" aria-label="предыдущий тур" data-button="tours-prev">
+              <svg width="14" height="9" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="btn-arrow btn-arrow--next" aria-label="следующий тур" data-button="tours-next">
+              <svg width="14" height="9" aria-hidden="true" focusable="false">
+                <use href="img/sprite.svg#arrow-next"></use>
+              </svg>
+            </button>
           </div>
-          <ul class="tours__list">
-            <li class="tours__item">
-              <article class="tours__card">
-                <div class="tour__img-wrapper">
-                  <img src="img/tours/tour-1.jpg" alt="Эльбрус">
+        </header>
+        <div class="tours__slider swiper" data-swiper="tours">
+          <ul class="tours__list swiper-wrapper">
+            <li class="tours__slide swiper-slide">
+              <div class="tours__img-wrapper">
+                <img src="img/tours/tour-1.jpg" alt="Подножие Эльбруса" >
+              </div>
+              <div class="tours__content">
+                <div class="tours__header-wrapper text-xsmall">
+                  <span class="tours__feature tours__feature--location feature feature--location">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#pin-filled"></use>
+                    </svg>
+                    Кавказ
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#sun"></use>
+                    </svg>
+                    4 дня
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#moon"></use>
+                    </svg>
+                    3 ночи
+                  </span>
                 </div>
-                <div class="tour__content">
-                  <p class="tour__features">
-                    <span class="tour__feature feature feature--location">Кавказ</span>
-                    <span class="tour__feature feature feature--days">4 дня</span>
-                    <span class="tour__feature feature feature--nights">3 ночи</span>
-                  </p>
-                  <h2>Путешествие вокруг Эльбруса</h2>
+                <h3 class="tours__card-title">Путешествие<br> вокруг Эльбруса</h3>
+                <dl class="tours__footer">
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Сложность:</dt>
+                    <dd class="tour__desc tour__desc--difficulty">
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star"></use></svg>
+                    </dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Даты набора:</dt>
+                    <dd class="tour__desc">12.06–19.06</dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Группа:</dt>
+                    <dd class="tour__desc">до 15 чел.</dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+            <li class="tours__slide swiper-slide">
+              <div class="tours__img-wrapper">
+                <img src="img/tours/tour-2.jpg" alt="Подножие Белухи" >
+              </div>
+              <div class="tours__content">
+                <div class="tours__header-wrapper text-xsmall">
+                  <span class="tours__feature tours__feature--location feature feature--location">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#pin-filled"></use>
+                    </svg>
+                    Алтай
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#sun"></use>
+                    </svg>
+                    14 дней
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#moon"></use>
+                    </svg>
+                    13 ночей
+                  </span>
                 </div>
-              </article>
+                <h3 class="tours__card-title">Путь к подножию<br>Белухи</h3>
+                <dl class="tours__footer">
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Сложность:</dt>
+                    <dd class="tour__desc tour__desc--difficulty">
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star"></use></svg>
+                    </dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Даты набора:</dt>
+                    <dd class="tour__desc">14.06–23.06</dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Группа:</dt>
+                    <dd class="tour__desc">до 25 чел.</dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+            <li class="tours__slide swiper-slide">
+              <div class="tours__img-wrapper">
+                <img src="img/tours/tour-3.jpg" alt="Подножие Белухи" >
+              </div>
+              <div class="tours__content">
+                <div class="tours__header-wrapper text-xsmall">
+                  <span class="tours__feature tours__feature--location feature feature--location">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#pin-filled"></use>
+                    </svg>
+                    Адыгея
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#sun"></use>
+                    </svg>
+                    6 дней
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#moon"></use>
+                    </svg>
+                    6 ночей
+                  </span>
+                </div>
+                <h3 class="tours__card-title">Через Фишт<br>к Чёрному морю<br>и обратно</h3>
+                <dl class="tours__footer">
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Сложность:</dt>
+                    <dd class="tour__desc tour__desc--difficulty">
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star"></use></svg>
+                    </dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Даты набора:</dt>
+                    <dd class="tour__desc">15.07–19.07</dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Группа:</dt>
+                    <dd class="tour__desc">до 22 чел.</dd>
+                  </div>
+                </dl>
+              </div>
+            </li>
+            <li class="tours__slide swiper-slide">
+              <div class="tours__img-wrapper">
+                <img src="img/tours/tour-1.jpg" alt="Подножие Белухи" >
+              </div>
+              <div class="tours__content">
+                <div class="tours__header-wrapper text-xsmall">
+                  <span class="tours__feature tours__feature--location feature feature--location">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#pin-filled"></use>
+                    </svg>
+                    Кавказ
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#sun"></use>
+                    </svg>
+                    4 дня
+                  </span>
+                  <span class="tours__feature feature feature--no-border text-xsmall">
+                    <svg width="20" height="20" aria-hidden="true" focusable="false">
+                      <use href="img/sprite.svg#moon"></use>
+                    </svg>
+                    3 ночи
+                  </span>
+                </div>
+                <h3 class="tours__card-title">Путешествие<br> вокруг Эльбруса</h3>
+                <dl class="tours__footer">
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Сложность:</dt>
+                    <dd class="tour__desc tour__desc--difficulty">
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star-full"></use></svg>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false"><use href="img/sprite.svg#star"></use></svg>
+                    </dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Даты набора:</dt>
+                    <dd class="tour__desc">12.06–19.06</dd>
+                  </div>
+                  <div class="tours__footer-wrapper">
+                    <dt class="tour__caption">Группа:</dt>
+                    <dd class="tour__desc">до 15 чел.</dd>
+                  </div>
+                </dl>
+              </div>
             </li>
           </ul>
         </div>
+        <a class="tours__button-big" href="#">
+          Показать все туры
+          <svg width="9" height="14" aria-hidden="true" focusable="false">
+            <use href="img/sprite.svg#icon-right"></use>
+          </svg>
+        </a>
       </section>
-
+      <!-- <section data-test="training">
+      </section> -->
+      <!-- <section data-test="about">
+      </section> -->
+      <!-- <section data-test="reviews">
+      </section> -->
+      <!-- <section data-test="adv">
+      </section> -->
+      <!-- <section data-test="gallery">
+      </section> -->
+      <!-- <section data-test="form">
+      </section> -->
+      <!-- <section data-test="footer">
+      </section> -->
     </main>
-    <!-- <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div> -->
 
-    <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
 
-    <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
+
+
+
+
+
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

@@ -4,8 +4,29 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+
+  &--hero {
+    border: 1px solid rgba(255, 255, 255, 0.50);
+  }
+
+  &--location {
+    background-color: $btn-color-primary;
+    padding: 6px 12px;
+    margin-right: auto;
+  }
+
+  &--no-border {
+    padding: 0;
+    gap: 12px;
+  }
 }
 
-.feature--hero {
-  border: 1px solid rgba(255, 255, 255, 0.50);
-}
+// .feature--hero {
+//   border: 1px solid rgba(255, 255, 255, 0.50);
+// }
+
+// .feature--location {
+//   background-color: $btn-color-primary;
+//   padding: 6px 12px;
+//   margin-right: auto;
+// }

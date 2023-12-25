@@ -12,3 +12,22 @@
     padding: 0 15px;
   }
 }
+
+.container-inner {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 120px;
+  max-width: 1440px;
+
+  @include tablet {
+    padding: 0 45px;
+  }
+
+  @include mobile {
+    padding: 0 clamp(15px, 5.85vw, 45px);
+  }
+
+  @include break($vp-568) {
+    padding: 0 15px;
+  }
+}

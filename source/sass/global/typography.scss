@@ -10,7 +10,7 @@
 }
 
 @mixin heading-2 {
-  font-size: 55px;
+  font-size: 35px;
   font-weight: 800;
   line-height: 55px; /* 100% */
 
@@ -68,6 +68,12 @@
   line-height: 16px; /* 100% */
   letter-spacing: 0.64px;
   text-transform: uppercase;
+
+  @include break($vp-568) {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+    letter-spacing: 0.56px;
+  }
 }
 
 @mixin button-regular {

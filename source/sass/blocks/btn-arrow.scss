@@ -1,0 +1,28 @@
+.btn-arrow {
+  display: inline-flex;
+  width: 37px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  background-color: $btn-color-primary;
+  color: $text-color-inverse;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color $trans-default, color $trans-default, border-color $trans-default;
+
+  &:hover:not(:disabled) {
+    background-color: $btn-color-bg-inverse;
+    border-color: $btn-color-primary;
+    color: $btn-color-primary;
+    transition: background-color $trans-default-min, color $trans-default-min, border-color $trans-default-min,  scale $trans-default-min;
+  }
+
+  &:active:not(:disabled) {
+    scale: 1.05;
+    transition: scale $trans-default-min;
+  }
+
+  &:disabled {
+    background: $btn-bg-color-disabled;
+  }
+}
