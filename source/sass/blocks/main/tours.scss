@@ -1,5 +1,7 @@
 .tours {
-  margin-top: 789px;
+  // margin-top: 789px;
+  margin-top: 673px;
+  padding-top: 114px;
   padding-bottom: 110px;
   position: relative;
 
@@ -9,23 +11,37 @@
   }
 
   @include tablet {
-    margin-top: 1001px;
+    margin-top: 944px;
+    padding-top: 58px;
+    min-height: auto;
+    padding-bottom: 45px;
+
   }
 
   @include break($vp-568) {
-    margin-top: 503px;
+    // margin-top: 503px;
+    padding-top: 33px;
+    margin-top: 470px;
+    padding-bottom: 20px;
   }
 
   & > img {
     position: absolute;
     right: 0;
-    top: -115px;
+    top: 0;
     width: 602px;
     height: 1630px;
 
     @include tablet {
-      top: -59px;
+      top: -2px;
       height: 1364px;
+    }
+
+    @include mobile {
+      top: 115px;
+      width: 346px;
+      height: 777px;
+      right: -175px;
     }
   }
 }
@@ -49,6 +65,7 @@
 .tours__title {
   margin: 0;
   flex-grow: 1;
+  transform: translateY(-2px);
 
   @include break($vp-568) {
     font-size: 22px;
@@ -67,7 +84,7 @@
 }
 
 .tours__slider {
-  margin-bottom: 53px;
+  margin-bottom: 55px;
 
   @include tablet {
     margin-bottom: 26px;
@@ -187,7 +204,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 16px; /* 100% */
-  letter-spacing: 0.64px;
+  letter-spacing: 0.34px;
   text-transform: uppercase;
   gap: 10px;
 

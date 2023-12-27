@@ -1,0 +1,403 @@
+.training {
+  padding: 32px 0 56px;    // для макета
+  // padding: 41px 0 56px; // для теста
+
+  @include break($vp-1200) {
+    padding-bottom: 0;
+  }
+
+  @include tablet {
+    padding-top: 61px;
+  }
+
+  @include break($vp-568) {
+    padding-top: 26px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    max-width: 820px;
+
+    @include tablet {
+      max-width: 560px;
+    }
+
+    @include break($vp-568) {
+      font-size: 14px;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+}
+
+.training__container {
+  position: relative;
+
+  & > img {
+    // display: none;
+    position: absolute;
+    width: 840px;
+    height: 280px;
+    bottom: -152px;
+    right: -166px;
+
+    @include tablet {
+      bottom: 11px;
+      right: -160px;
+    }
+  }
+}
+
+.training__title {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 100%; /* 35px */
+  margin: 0;
+  margin-bottom: 33px;
+
+  @include tablet {
+    font-size: 25px;
+    line-height: 25px; /* 100% */
+    margin-bottom: 21px;
+  }
+
+  @include break($vp-568) {
+    font-size: 22px;
+    line-height: 22px; /* 100% */
+    margin-bottom: 16px;
+  }
+}
+
+.training__subtitle {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px; /* 100% */
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 50px;
+
+  @include tablet {
+    margin-top: 29px;
+    margin-bottom: 60px;
+  }
+
+  @include break($vp-568) {
+    margin-bottom: 55px;
+  }
+
+  &--second {
+    margin-top: 58px;
+    margin-bottom: 17px;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 18px; /* 100% */
+      margin-top: 27px;
+      margin-bottom: 32px;
+    }
+
+    @include break($vp-568) {
+      margin-top: 25px;
+      font-size: 16px;
+      line-height: 16px; /* 100% */
+      margin-bottom: 23px;
+    }
+  }
+}
+
+.training .swiper-slide {
+  min-height: 356px;
+}
+
+.training .swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.training__buttons-wrapper {
+  position: absolute;
+  top: -55px;
+  right: 0;
+  z-index: 2;
+
+  @include tablet {
+    top: -64px;
+  }
+
+  @include break($vp-568) {
+    top: -59px;
+  }
+}
+
+.training__card {
+  padding: 15px;
+  border: 1px solid rgba(2, 102, 193, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  img {
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    @include break($vp-568) {
+      width: 100%;
+      gap: 16px;
+    }
+  };
+
+  h4 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px; /* 114.286% */
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 16px; /* 133.333% */
+    margin: 0;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 16px; /* 133.333% */
+    }
+  }
+}
+
+.training__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.training__vk {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+}
+
+.training__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 253px);
+
+  @include break($vp-1200) {
+    width: 596px;
+    grid-template-columns: 50% 50%;
+    row-gap: 49px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    gap: 25px;
+  }
+}
+
+.training__item {
+  position: relative;
+  min-height: 86px;
+  padding: 8px 10px 30px 45px;
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+
+  @include break($vp-1200) {
+    font-size: 14px;
+    line-height: 22px; /* 157.143% */
+  }
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 18px; /* 150% */
+    min-height: auto;
+    width: 275px;
+    height: 36px;
+    padding: 0 0 0 63px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 100%;
+    height: 1px;
+    background-color: #0266C1;
+    opacity: 0.2;
+
+    @include break($vp-1200) {
+      bottom: 17px;
+      width: calc(100% + 50px);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $btn-color-primary;
+    left: 10px;
+    bottom: 14px;
+
+    @include break($vp-1200) {
+      bottom: 10px;
+    }
+  }
+
+  &--map {
+    background: url("../img/training/icon-map.svg") no-repeat 10px 10px;
+
+    @include mobile {
+      background-size: 20px 20px;
+      background-position: 30px center;
+
+      &::after {
+        left: 0;
+        top: 12px
+      }
+
+      &::before {
+        top: 20px;
+        left: 8px;
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+        width: 60px;
+      }
+
+    }
+  }
+  &--boots {
+    background: url("../img/training/icon-boots.svg") no-repeat 10px 10px;
+
+    @include break($vp-1200) {
+      background-position-x: 55px ;
+      padding-left: 90px;
+
+      &::after {
+        left: 56px;
+      }
+
+      &::before {
+        width: 50px;
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+        left: 63px;
+      }
+    }
+
+    @include mobile {
+      background-size: 20px 20px;
+      background-position: 30px center;
+      padding: 0 0 0 63px;
+
+      &::after {
+        left: 0;
+        top: 12px
+      }
+
+      &::before {
+        top: 20px;
+        left: 8px;
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+        width: 60px;
+      }
+    }
+  }
+  &--pine-tree {
+    background: url("../img/training/icon-pine-tree.svg") no-repeat 10px 10px;
+
+    @include break($vp-1200) {
+      background-position-x: 55px ;
+      padding-left: 90px;
+
+      &::after {
+        left: 56px;
+        bottom: auto;
+        top: -19px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      background-size: 20px 20px;
+      background-position: 30px center;
+      padding: 0 0 0 63px;
+
+      &::after {
+        left: 0;
+        top: 12px
+      }
+
+      &::before {
+        display: block;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);;
+        top: 20px;
+        left: 8px;
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+        width: 60px;
+      }
+    }
+  }
+  &--mountain {
+    background: url("../img/training/icon-mountain.svg") no-repeat 10px 10px;
+
+    &::before {
+      width: 100vw;
+    }
+    @include break($vp-1200) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      padding-right: 20px;
+
+      &::after {
+        bottom: auto;
+        top: -19px;
+      }
+
+      &::before {
+        bottom: auto;
+        top: -12px;
+        width: calc(100% + 50px);
+      }
+    }
+
+    @include mobile {
+      background-size: 20px 20px;
+      background-position: 30px center;
+      padding: 0 0 0 63px;
+      max-width: 260px;
+
+      &::after {
+        left: 0;
+        top: 12px
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

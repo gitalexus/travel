@@ -1,0 +1,121 @@
+.about {
+  position: relative;
+
+  @include mobile {
+    padding-top: 428px;
+    padding-bottom: 15px;
+  }
+}
+
+.about__content {
+  padding: 18px 0 70px 616px;
+  position: relative;
+  z-index: 1;
+
+  @include break($vp-1200) {
+    padding: 31px 0 70px 407px;
+  }
+
+  @include mobile {
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 100%; /* 35px */
+    margin: 0;
+    margin-bottom: 56px;
+
+    @include break($vp-1200) {
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 25px; /* 100% */
+      padding-left: 5px;
+      margin-bottom: 35px;
+    }
+
+    @include mobile {
+      padding-left: 0;
+      font-size: 22px;
+      line-height: 22px; /* 100% */
+      margin-bottom: 25px;
+    }
+  }
+
+  h3 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px; /* 100% */
+    margin: 0;
+    margin-bottom: 16px;
+
+    @include break($vp-1200) {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 18px; /* 100% */
+      margin-bottom: 11px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 16px; /* 100% */
+      margin-bottom: 13px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 22px; /* 157.143% */
+    max-width: 570px;
+    margin: 0;
+    margin-bottom: 29px;
+
+    @include break($vp-1200) {
+      font-size: 14px;
+      line-height: 22px; /* 157.143% */
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px; /* 142.857% */
+      margin-bottom: 27px;
+    }
+  }
+  p ~ p {
+    max-width: none;
+    margin-bottom: 0;
+  }
+}
+
+.about__image-wrapper {
+    position: absolute;
+    // width: 808px;
+    width: 100%;
+    max-width: 808px;
+    min-width: 350px;
+    height: 474px;
+    left: 0px;
+    top: -5px;
+
+    @include break($vp-1200) {
+      width: 541px;
+      height: 350px;
+      top: 73px;
+    }
+
+    @include mobile {
+      width: 100vw;
+      max-width: 434px;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    img {
+      @include mobile {
+        width: 434px;
+        height: 400px;
+        max-width: none;
+      }
+    }
+}
