@@ -13,7 +13,7 @@
   z-index: 1;
 
   @include break($vp-1200) {
-    padding: 31px 0 70px 407px;
+    padding: 31px 0 15px 407px;
   }
 
   @include mobile {
@@ -109,6 +109,7 @@
       max-width: 434px;
       height: 400px;
       overflow: hidden;
+      top: 21px;
     }
 
     img {

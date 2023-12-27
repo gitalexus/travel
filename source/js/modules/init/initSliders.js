@@ -3,6 +3,7 @@ import Swiper from '../../vendor/swiper.js';
 const heroSliderSelector = '[data-swiper="hero"]';
 const toursSliderSelector = '[data-swiper="tours"]';
 const trainingSliderSelector = '[data-swiper="training"]';
+const reviewsSliderSelector = '[data-swiper="reviews"]';
 
 const heroSliderOptions = {
   loop: true,
@@ -71,6 +72,37 @@ const trainingSliderOptions = {
   },
 };
 
+const reviewsSliderOptions = {
+  navigation: {
+    nextEl: '[data-button="reviews-next"]',
+    prevEl: '[data-button="reviews-prev"]',
+  },
+
+  speed: 500,
+  grabCursor: true,
+  initialSlide: 0,
+  loop: true,
+
+  breakpoints: {
+    0: {
+      slidesPerView: 'auto',
+      // slidesPerView: 1,
+    },
+    350: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: 'auto',
+      spaceBetween: 120,
+    },
+  },
+};
+
 function initSlider(sliderSelector, sliderOptions) {
   const slider = document.querySelector(sliderSelector);
   if (slider) {
@@ -83,6 +115,7 @@ function initSliders() {
   initSlider(heroSliderSelector, heroSliderOptions);
   initSlider(toursSliderSelector, toursSliderOptions);
   initSlider(trainingSliderSelector, trainingSliderOptions);
+  initSlider(reviewsSliderSelector, reviewsSliderOptions);
 
   // добавляется возможность фокуса на слайды
   const slides = document.querySelectorAll('[data-slide="slide"]');
