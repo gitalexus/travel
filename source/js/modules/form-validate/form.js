@@ -59,16 +59,33 @@ export class Form {
   }
 
   _onFormSubmit(event, callback = null) {
-    if (this.validateForm(event.target) && callback) {
-      this._callbacks[callback].successCallback(event);
-      if (this._callbacks[callback].reset) {
-        setTimeout(() => {
-          this.reset(event.target);
-        }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
+    const inputs = event.target.querySelectorAll('input')
+    if (inputs[1].value && inputs[1].getAttribute('aria-invalid')) {
+      inputs[1].setCustomValidity('Необходимо ввести email включая коневой домен');
+      inputs[1].reportValidity();
+    }
+    if (inputs[0].value && inputs[0].getAttribute('aria-invalid')) {
+      inputs[0].setCustomValidity('Необходимо заполнить телефон введя 10 цифр');
+      inputs[0].reportValidity();
+      inputs[0].setCustomValidity('');
+    }
+    if (!inputs[0].value && !inputs[1].value) {
+      inputs[0].setCustomValidity('Необходимо заполнить хотя бы одно из полей');
+      inputs[0].reportValidity();
+
+    } else {
+      if (this.validateForm(event.target) && callback) {
+        this._callbacks[callback].successCallback(event);
+        if (this._callbacks[callback].reset) {
+          setTimeout(() => {
+            this.reset(event.target);
+          }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
+        }
+        return;
       }
-      return;
     }
     if (!this.validateForm(event.target) && callback) {
+
       this._callbacks[callback].errorCallback(event);
       return;
     }

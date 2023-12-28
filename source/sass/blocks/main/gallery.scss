@@ -92,8 +92,10 @@
   }
 }
 
-.swiper-container {
-  padding: 0 15px;
+.gallery .swiper-container {
+  @include mobile {
+    padding: 0 15px;
+  }
 }
 
 .gallery__buttons-wrapper {
