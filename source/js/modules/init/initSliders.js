@@ -4,6 +4,7 @@ const heroSliderSelector = '[data-swiper="hero"]';
 const toursSliderSelector = '[data-swiper="tours"]';
 const trainingSliderSelector = '[data-swiper="training"]';
 const reviewsSliderSelector = '[data-swiper="reviews"]';
+const advantagesSliderSelector = '[data-swiper="advantages"]';
 
 const heroSliderOptions = {
   loop: true,
@@ -86,7 +87,6 @@ const reviewsSliderOptions = {
   breakpoints: {
     0: {
       slidesPerView: 'auto',
-      // slidesPerView: 1,
     },
     350: {
       slidesPerView: 'auto',
@@ -103,6 +103,27 @@ const reviewsSliderOptions = {
   },
 };
 
+const advantagesSliderOptions = {
+  navigation: {
+    nextEl: '[data-button="advantages-next"]',
+    prevEl: '[data-button="advantages-prev"]',
+  },
+
+  speed: 500,
+  grabCursor: true,
+  initialSlide: 2,
+  centeredSlides: true,
+  loop: true,
+  // spaceBetween: 30,
+
+  breakpoints: {
+    0: {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    },
+  },
+};
+
 function initSlider(sliderSelector, sliderOptions) {
   const slider = document.querySelector(sliderSelector);
   if (slider) {
@@ -111,11 +132,32 @@ function initSlider(sliderSelector, sliderOptions) {
   return null;
 }
 
+function initAdvantagesSlider(advantagesSelector, advantagesOptions) {
+  if (advantagesSelector) {
+    let slider;
+    const tablet = window.matchMedia('(max-width: 1024px)');
+
+    if (!tablet.matches) {
+      slider = initSlider(advantagesSelector, advantagesOptions);
+    }
+
+    window.addEventListener('resize', () => {
+      if (tablet.matches && slider) {
+        slider.destroy();
+        slider = null;
+      } else if (!tablet.matches && !slider) {
+        slider = initSlider(advantagesSelector, advantagesOptions);
+      }
+    });
+  }
+}
+
 function initSliders() {
   initSlider(heroSliderSelector, heroSliderOptions);
   initSlider(toursSliderSelector, toursSliderOptions);
   initSlider(trainingSliderSelector, trainingSliderOptions);
   initSlider(reviewsSliderSelector, reviewsSliderOptions);
+  initAdvantagesSlider(advantagesSliderSelector, advantagesSliderOptions);
 
   // добавляется возможность фокуса на слайды
   const slides = document.querySelectorAll('[data-slide="slide"]');

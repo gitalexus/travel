@@ -1,0 +1,152 @@
+.advantages {
+  position: relative;
+  max-width: $vp-1440;
+  padding-top: 19px;
+  margin: auto;
+
+  @include tablet {
+    width: 100%;
+    padding: 70px 45px 0;
+  }
+
+  @include mobile {
+    padding: 15px;
+    padding-top: 23px;
+  }
+}
+
+.advantages__title {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 100%; /* 35px */
+  text-align: center;
+  margin: 0;
+  margin-bottom: 48px;
+
+  @include mobile {
+    margin-bottom: 19px;
+    font-size: 22px;
+    line-height: 22px; /* 100% */
+  }
+}
+
+.advantages .swiper-container {
+  margin-bottom: 49px;
+}
+
+.advantages__buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.advantages__slide {
+  width: 380px;
+  min-height: 329px;
+  padding: 40px 19px;
+  text-align: center;
+  border: 1px solid rgba(2, 102, 193, 0.10);
+
+  @include tablet {
+    width: 100%;
+    padding: 30px 19px;
+    min-height: auto;
+  }
+
+  @include mobile {
+    padding: 19px 10px;
+  }
+
+  &--leaf {
+    @include tablet {
+      grid-column: 1 / -1;
+      width: 380px;
+      justify-self: center;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    h3 {
+      @include tablet {
+        padding: 0 40px;
+      }
+
+      @include mobile {
+        // padding: 0;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px; /* 100% */
+    margin-bottom: 15px;
+
+    @include tablet {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px; /* 100% */
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 14px; /* 100% */
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px; /* 157.143% */
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 18px; /* 150% */
+    }
+  }
+}
+
+.advantages__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid $icon-color-secondary;
+  margin: 0 auto;
+  margin-bottom: 28px;
+
+  @include tablet {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 25px;
+  }
+
+  @include mobile {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+  }
+}
+
+.advantages__swiper-wrapper {
+  @include tablet {
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    row-gap: 28px;
+  }
+
+  @include mobile {
+    grid-template-columns: calc(100vw - 30px);
+    row-gap: 15px;
+  }
+}
