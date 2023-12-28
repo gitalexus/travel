@@ -5,6 +5,7 @@ const toursSliderSelector = '[data-swiper="tours"]';
 const trainingSliderSelector = '[data-swiper="training"]';
 const reviewsSliderSelector = '[data-swiper="reviews"]';
 const advantagesSliderSelector = '[data-swiper="advantages"]';
+const gallerySliderSelector = '[data-swiper="gallery"]';
 
 const heroSliderOptions = {
   loop: true,
@@ -53,6 +54,7 @@ const trainingSliderOptions = {
   breakpoints: {
     0: {
       slidesPerView: 1,
+      autoHeight: false,
     },
     430: {
       slidesPerView: 2,
@@ -65,6 +67,7 @@ const trainingSliderOptions = {
     768: {
       slidesPerView: 3,
       spaceBetween: 20,
+      autoHeight: true,
     },
     1025: {
       slidesPerView: 4,
@@ -124,6 +127,33 @@ const advantagesSliderOptions = {
   },
 };
 
+const gallerySliderOptions = {
+  navigation: {
+    nextEl: '[data-button="gallery-next"]',
+    prevEl: '[data-button="gallery-prev"]',
+  },
+
+  slidesPerView: 'auto',
+  speed: 500,
+  grabCursor: true,
+  loop: true,
+  spaceBetween: 5,
+  initialSlide: 6,
+  slidesPerGroup: 2,
+
+  breakpoints: {
+    0: {
+      spaceBetween: 3,
+    },
+    768: {
+      spaceBetween: 5,
+    },
+    1024: {
+      spaceBetween: 5,
+    },
+  },
+};
+
 function initSlider(sliderSelector, sliderOptions) {
   const slider = document.querySelector(sliderSelector);
   if (slider) {
@@ -158,6 +188,7 @@ function initSliders() {
   initSlider(trainingSliderSelector, trainingSliderOptions);
   initSlider(reviewsSliderSelector, reviewsSliderOptions);
   initAdvantagesSlider(advantagesSliderSelector, advantagesSliderOptions);
+  initSlider(gallerySliderSelector, gallerySliderOptions);
 
   // добавляется возможность фокуса на слайды
   const slides = document.querySelectorAll('[data-slide="slide"]');

@@ -2,6 +2,7 @@
   position: relative;
   max-width: $vp-1440;
   padding-top: 19px;
+  padding-bottom: 81px;
   margin: auto;
 
   @include tablet {
@@ -32,6 +33,10 @@
 
 .advantages .swiper-container {
   margin-bottom: 49px;
+
+  @include mobile {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__buttons-wrapper {
@@ -75,10 +80,6 @@
     h3 {
       @include tablet {
         padding: 0 40px;
-      }
-
-      @include mobile {
-        // padding: 0;
       }
     }
   }
