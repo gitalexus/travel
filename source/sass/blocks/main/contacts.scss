@@ -1,0 +1,217 @@
+.contacts {
+  padding-top: 88px;
+  padding-bottom: 95px;
+
+  @include tablet {
+    padding-top: 55px;
+  }
+
+  @include mobile {
+    padding-top: 44px;
+  }
+}
+
+.contacts__title {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 100%;
+  margin: 0;
+  margin-bottom: 23px;
+
+  @include tablet {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 25px; /* 100% */
+    margin-bottom: 18px;
+  }
+
+  @include mobile {
+    font-size: 22px;
+    line-height: 22px; /* 100% */
+    margin-bottom: 11px;
+  }
+}
+
+.contacts__layout {
+  display: grid;
+  grid-template-columns: 1fr 585px;
+  gap: 20px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 40px;
+  }
+
+  @include mobile {
+    gap: 30px;
+  }
+}
+
+.contacts__left-col {
+
+  @include tablet {
+    padding: 0 45px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 500px;
+    margin-bottom: 49px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 20px; /* 142.857% */
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.contacts__right-col {
+  align-self: end;
+
+  @include tablet {
+    align-self: auto;
+  }
+}
+
+.contacts__map-wrapper {
+  width: 585px;
+  height: 324px;
+
+  @include tablet {
+    height: 340px;
+    width: 100%;
+  }
+
+  @include mobile {
+    height: 320px;
+  }
+
+  img {
+    @include tablet {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+
+    }
+  };
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  margin: 0;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 39px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.contacts__item {
+  padding-left: 56px;
+
+  @include tablet {
+    padding-left: 34px;
+  }
+
+  @include mobile {
+    padding-left: 32px;
+  }
+
+  &--phone {
+    background: url("../img/svg/phone.svg") no-repeat 0 12px;
+
+    @include tablet {
+      background-position: 0 0;
+    }
+
+    @include tablet {
+      background-position: 2px 2px;
+      background-size: 22px 22px;
+    }
+  }
+
+  &--letter {
+    background: url("../img/svg/mail.svg") no-repeat 0 12px;
+
+    @include tablet {
+      background-position: 0 0;
+    }
+
+    @include tablet {
+      background-position: 2px 2px;
+      background-size: 22px 22px;
+    }
+  }
+
+  &--pin {
+    background: url("../img/svg/pin-stroke.svg") no-repeat 0 12px;
+
+    @include tablet {
+      background-position: 0 0;
+    }
+
+    @include tablet {
+      background-position: 2px 2px;
+      background-size: 22px 22px;
+    }
+  }
+}
+
+.contacts__caption {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  margin-bottom: 9px;
+
+  @include tablet {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px; /* 100% */
+    margin-bottom: 5px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+    margin-bottom: 8px;
+  }
+}
+.contacts__desc {
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+  margin-left: 0;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px; /* 157.143% */
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 20px; /* 142.857% */
+    width: 180px;
+  }
+
+  a {
+    color: $text-color-primary;
+  }
+}

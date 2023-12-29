@@ -30,4 +30,10 @@
   @include break($vp-568) {
     padding: 0 15px;
   }
+
+  &--contacts {
+    @include tablet {
+     padding: 0;
+    }
+  }
 }
