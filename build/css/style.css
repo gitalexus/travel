@@ -3806,6 +3806,7 @@ body {
 @media (max-width: 1024px) {
   .contacts {
     padding-top: 55px;
+    padding-bottom: 19px;
   }
 }
 @media (max-width: 767px) {
@@ -4058,6 +4059,213 @@ body {
 }
 .contacts__desc a {
   color: #2D383F;
+}
+
+.footer {
+  padding-top: 31px;
+  padding-bottom: 32px;
+  border-top: 1px solid rgba(45, 56, 63, 0.2);
+}
+@media (max-width: 1024px) {
+  .footer {
+    padding-top: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 23px;
+  }
+}
+
+.footer__logo {
+  margin-left: 29px;
+}
+@media (max-width: 1024px) {
+  .footer__logo {
+    margin-left: 0;
+  }
+}
+
+.footer__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr 200px;
+  grid-template-columns: 200px 1fr 200px;
+  min-height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 1024px) {
+  .footer__content {
+    -ms-grid-columns: 142px 1fr;
+    grid-template-columns: 142px 1fr;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__nav {
+    width: 100%;
+    padding: 0 11px;
+  }
+}
+
+.footer__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  list-style-type: none;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 11px;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .footer__nav-list {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__nav-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (120px)[2];
+    grid-template-columns: repeat(2, 120px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    row-gap: 5px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__nav-item {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+.footer__nav-link {
+  color: var(--Primary, #2D383F);
+  font-size: 16px;
+  line-height: 16px; /* 100% */
+  padding: 10px;
+}
+@media (max-width: 1024px) {
+  .footer__nav-link {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+  }
+}
+@media (max-width: 767px) {
+  .footer__nav-link {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+  }
+}
+.footer__nav-link:hover, .footer__nav-link:focus-visible {
+  color: #1C3374;
+}
+.footer__nav-link:active {
+  color: #0266C1;
+}
+
+.footer__link {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #2D383F;
+}
+@media (max-width: 1024px) {
+  .footer__link {
+    display: none;
+  }
+}
+.footer__link:hover, .footer__link:focus-visible {
+  color: #1C3374;
+}
+.footer__link:active {
+  color: #0266C1;
+}
+
+.footer__list-social {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 14px;
+  margin-bottom: 23px;
+}
+@media (max-width: 1024px) {
+  .footer__list-social {
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+}
+
+.social__link {
+  width: 30px;
+  height: 30px;
+  color: rgb(45, 56, 63);
+  border: 1px solid rgba(45, 56, 63, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.social__link:hover:not(:disabled):not(.social__link--disabled), .social__link:focus-visible:not(:disabled):not(.social__link--disabled) {
+  border-color: rgb(45, 56, 63);
+}
+.social__link:active:not(:disabled):not(.social__link--disabled) {
+  color: white;
+  background-color: rgb(2, 102, 193);
+  border: transparent;
+}
+.social__link:disabled {
+  opacity: 0.3;
+}
+
+.footer__copyright-link {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 100%; /* 12px */
 }
 
 .btn {

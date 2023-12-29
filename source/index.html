@@ -916,8 +916,8 @@
           <div class="contacts__right-col">
             <div class="contacts__map-wrapper">
               <picture>
-                <source media="(max-width: 768px)" srcset="img/map-m.jpg">
-                <source media="(max-width: 1024px)" srcset="img/map-t.jpg">
+                <source media="(max-width: 767px)" srcset="img/map-m.jpg">
+                <source media="(max-width: 1023px)" srcset="img/map-t.jpg">
                 <img src="img/map.jpg" alt="" width="585" height="324">
               </picture>
             </div>
@@ -927,7 +927,62 @@
       <!-- <section data-test="footer">
       </section> -->
     </main>
-
+    <footer class="footer" data-test="footer">
+      <div class="container-inner">
+        <div class="footer__content">
+          <a class="footer__logo" href="#header">
+            <img src="./img/svg/logotype.svg" width="142" height="42" alt="Логотип компании lifetour">
+          </a>
+          <div class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#tours">Туры</a>
+              </li>
+              <li class="footer__nav-item footer__nav-item--left-2">
+                <a class="footer__nav-link" href="#training">Обучение</a>
+              </li>
+              <li class="footer__nav-item footer__nav-item--left-3">
+                <a class="footer__nav-link" href="#about">О нас</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#gallery">Фотографии</a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <a class="footer__link" href="tel:88007253232">8 800 725-32-32</a>
+        </div>
+        <ul class="footer__list-social social">
+          <li class="social__item">
+            <a class="social__link" href="https://vk.com" aria-label="Социальная сеть В Контакте">
+              <svg width="32" height="30" role="img" focusable="false" aria-hidden="true">
+                <use href="img/sprite.svg#vk-footer"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://vk.ru" aria-label="Социальная сеть В Контакте">
+              <svg width="32" height="30" role="img" focusable="false" aria-hidden="true">
+                <use href="img/sprite.svg#ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://reddit.com" aria-label="Социальная сеть Reddit">
+              <svg width="32" height="30" role="img" focusable="false" aria-hidden="true">
+                <use href="img/sprite.svg#reddit"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__copyright-link" href="#">Политика конфеденциальности</a>
+      </div>
+    </footer>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
